@@ -16,6 +16,8 @@
 		BFF80BC9236FCC18008E139B /* RuntimeUseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF80BC8236FCC18008E139B /* RuntimeUseTests.m */; };
 		BFF80BD4236FCC18008E139B /* RuntimeUseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF80BD3236FCC18008E139B /* RuntimeUseUITests.m */; };
 		BFF80BE3236FCEB1008E139B /* UIViewController+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF80BE2236FCEB1008E139B /* UIViewController+Hook.m */; };
+		BFF80BE6237002B9008E139B /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF80BE5237002B9008E139B /* Person.m */; };
+		BFF80BE9237004C9008E139B /* NSObject+Forward.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF80BE8237004C9008E139B /* NSObject+Forward.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		BFF80BD5236FCC18008E139B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFF80BE1236FCEB1008E139B /* UIViewController+Hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Hook.h"; sourceTree = "<group>"; };
 		BFF80BE2236FCEB1008E139B /* UIViewController+Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Hook.m"; sourceTree = "<group>"; };
+		BFF80BE4237002B9008E139B /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		BFF80BE5237002B9008E139B /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		BFF80BE7237004C9008E139B /* NSObject+Forward.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Forward.h"; sourceTree = "<group>"; };
+		BFF80BE8237004C9008E139B /* NSObject+Forward.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Forward.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,10 @@
 				BFF80BBE236FCC18008E139B /* main.m */,
 				BFF80BE1236FCEB1008E139B /* UIViewController+Hook.h */,
 				BFF80BE2236FCEB1008E139B /* UIViewController+Hook.m */,
+				BFF80BE4237002B9008E139B /* Person.h */,
+				BFF80BE5237002B9008E139B /* Person.m */,
+				BFF80BE7237004C9008E139B /* NSObject+Forward.h */,
+				BFF80BE8237004C9008E139B /* NSObject+Forward.m */,
 			);
 			path = RuntimeUse;
 			sourceTree = "<group>";
@@ -268,7 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF80BB4236FCC14008E139B /* ViewController.m in Sources */,
+				BFF80BE9237004C9008E139B /* NSObject+Forward.m in Sources */,
 				BFF80BBF236FCC18008E139B /* main.m in Sources */,
+				BFF80BE6237002B9008E139B /* Person.m in Sources */,
 				BFF80BB1236FCC14008E139B /* AppDelegate.m in Sources */,
 				BFF80BE3236FCEB1008E139B /* UIViewController+Hook.m in Sources */,
 			);

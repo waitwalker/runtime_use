@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Person.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
 
@@ -59,7 +60,7 @@ void addNewMethod(id obj, SEL _cmd)  {
 
 + (BOOL)resolveInstanceMethod:(SEL)sel {
     if (sel == @selector(buttonActionss)) {
-        class_addMethod([self class], sel, (IMP)addNewMethod, "v@:");
+        //class_addMethod([self class], sel, (IMP)addNewMethod, "v@:");
         return true;
     }
     return [super resolveInstanceMethod:sel];
@@ -68,6 +69,22 @@ void addNewMethod(id obj, SEL _cmd)  {
 + (BOOL)resolveClassMethod:(SEL)sel {
     return [super resolveClassMethod:sel];
 } 
+
+/**
+ * @description 快速消息转发, 如果动态方法解析没有实现或者没有处理走这里
+ * @author 
+ * @date 
+ * @parameter 
+ */
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    
+    if (aSelector == @selector(buttonActionss)) {
+        return [[Person alloc]init];
+    }
+    
+    return [super forwardingTargetForSelector:aSelector];
+}
+
 
 
 
