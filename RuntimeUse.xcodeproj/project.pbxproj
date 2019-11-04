@@ -15,6 +15,7 @@
 		BFF80BBF236FCC18008E139B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF80BBE236FCC18008E139B /* main.m */; };
 		BFF80BC9236FCC18008E139B /* RuntimeUseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF80BC8236FCC18008E139B /* RuntimeUseTests.m */; };
 		BFF80BD4236FCC18008E139B /* RuntimeUseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF80BD3236FCC18008E139B /* RuntimeUseUITests.m */; };
+		BFF80BE3236FCEB1008E139B /* UIViewController+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF80BE2236FCEB1008E139B /* UIViewController+Hook.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		BFF80BCF236FCC18008E139B /* RuntimeUseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeUseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF80BD3236FCC18008E139B /* RuntimeUseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeUseUITests.m; sourceTree = "<group>"; };
 		BFF80BD5236FCC18008E139B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFF80BE1236FCEB1008E139B /* UIViewController+Hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Hook.h"; sourceTree = "<group>"; };
+		BFF80BE2236FCEB1008E139B /* UIViewController+Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Hook.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				BFF80BBA236FCC18008E139B /* LaunchScreen.storyboard */,
 				BFF80BBD236FCC18008E139B /* Info.plist */,
 				BFF80BBE236FCC18008E139B /* main.m */,
+				BFF80BE1236FCEB1008E139B /* UIViewController+Hook.h */,
+				BFF80BE2236FCEB1008E139B /* UIViewController+Hook.m */,
 			);
 			path = RuntimeUse;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 				BFF80BB4236FCC14008E139B /* ViewController.m in Sources */,
 				BFF80BBF236FCC18008E139B /* main.m in Sources */,
 				BFF80BB1236FCC14008E139B /* AppDelegate.m in Sources */,
+				BFF80BE3236FCEB1008E139B /* UIViewController+Hook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
