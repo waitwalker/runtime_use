@@ -10,6 +10,7 @@
 #import "Person.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
+#import "NSObject+Forward.h"
 
 @interface ViewController ()
 
@@ -72,18 +73,19 @@ void addNewMethod(id obj, SEL _cmd)  {
 
 /**
  * @description 快速消息转发, 如果动态方法解析没有实现或者没有处理走这里
- * @author 
+ * @author
  * @date 
  * @parameter 
  */
 - (id)forwardingTargetForSelector:(SEL)aSelector {
     
     if (aSelector == @selector(buttonActionss)) {
-        return [[Person alloc]init];
+        return self;
     }
     
     return [super forwardingTargetForSelector:aSelector];
 }
+
 
 
 

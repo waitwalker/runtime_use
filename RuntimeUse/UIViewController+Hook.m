@@ -44,6 +44,24 @@
     [self swizzle_viewWillAppear:animated];
 }
 
+- (void)forwardInvocation:(NSInvocation *)anInvocation {
+    SEL sel = anInvocation.selector;
+    if ([self respondsToSelector:sel]) {
+        [anInvocation invokeWithTarget:self];
+    } else {
+        //[self doesNotRecognizeSelector:sel];
+        NSLog(@"没有实现方法:%@",NSStringFromSelector(sel));
+    } 
+}
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    NSMethodSignature *methodSignature = [super methodSignatureForSelector:aSelector];
+    if (!methodSignature) {
+        methodSignature = [NSMethodSignature signatureWithObjCTypes:"v@:*"];
+    }
+    return methodSignature;
+}
+
 
 
 
