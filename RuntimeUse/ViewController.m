@@ -14,6 +14,9 @@
 
 @interface ViewController ()
 
+@property (nonatomic, copy) NSArray *testArray;
+@property (nonatomic, strong) NSMutableArray *mutableArray;
+
 @end
 
 @implementation ViewController
@@ -27,6 +30,13 @@
     return _name;
 }
 
+- (NSMutableArray *)mutableArray {
+    if (_mutableArray == nil) {
+        _mutableArray = [NSMutableArray new];
+    }
+    return _mutableArray;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,13 +44,23 @@
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
     NSLog(@"%p,%p",button,&button);
     [button setTitle:@"按钮" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(buttonActionss) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchUpInside];
     [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [self.view addSubview:button];
+    
+    self.mutableArray = [NSMutableArray arrayWithObjects:@"1",@"2", nil];
+    self.testArray = self.mutableArray;
+    
+    NSLog(@"mutableArray:%@  testArray:%@",self.mutableArray,self.testArray);
 }
 
 
+
+
 - (void)buttonAction {
+    [self.mutableArray addObject:@"3"];
+    NSLog(@"mutableArray:%@  testArray:%@",self.mutableArray,self.testArray);
+    
     self.name = @"张三女";
     NSLog(@"self->isa:%@",self->isa);
     NSLog(@"self class:%@",[self class]);
