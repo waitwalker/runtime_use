@@ -14,7 +14,7 @@
 
 @interface ViewController ()
 
-@property (nonatomic, copy) NSArray *testArray;
+@property (nonatomic, strong) NSArray *testArray;
 @property (nonatomic, strong) NSMutableArray *mutableArray;
 
 @end
