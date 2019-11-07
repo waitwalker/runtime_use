@@ -10,6 +10,8 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
+static char const *const key = "key";
+
 @implementation UIViewController (Hook)
 
 + (void)load {
@@ -60,6 +62,17 @@
         methodSignature = [NSMethodSignature signatureWithObjCTypes:"v@:*"];
     }
     return methodSignature;
+}
+
+- (void)setCurrentIndex:(NSString *)currentIndex {
+    objc_setAssociatedObject(self,
+                             &key,
+                             currentIndex,
+                             OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (NSString *)currentIndex {
+    return objc_getAssociatedObject(self, &key);
 }
 
 
