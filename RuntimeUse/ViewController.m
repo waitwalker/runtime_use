@@ -61,6 +61,11 @@
     [self.mutableArray addObject:@"3"];
     NSLog(@"mutableArray:%@  testArray:%@",self.mutableArray,self.testArray);
     
+    NSArray *array0 = @[@"4",@"5"];
+    NSArray *array1 = [array0 mutableCopy];
+    
+    NSLog(@"array0:%@  array1:%@",array0,array1);
+    
     self.name = @"张三女";
     NSLog(@"self->isa:%@",self->isa);
     NSLog(@"self class:%@",[self class]);
